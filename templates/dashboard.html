@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Dashboard</title>
+  <style>
+    /* CSS styles for the dashboard */
+    .container {
+      max-width: 800px;
+      margin: 0 auto;
+      padding: 20px;
+    }
+    .post {
+      background-color: #f5f5f5;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+      padding: 10px;
+      margin-bottom: 20px;
+    }
+    .post h3 {
+      margin-top: 0;
+    }
+    .post p {
+      margin-bottom: 0;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>Dashboard</h1>
+    
+    <div id="posts-container">
+      <!-- Posts will be dynamically added here -->
+    </div>
+
+  </div>
+
+  <script src="{{ url_for('static', filename='dashboard.js') }}?v=123678"></script>
+  <button type="button" onclick="loadPosts()">Load</button>
+  <p><a href="/logout" id="qsLogoutBtn">Logout</a></p>
+</body>
+</html>
